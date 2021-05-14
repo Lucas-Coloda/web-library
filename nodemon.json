@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    "node_modules"
+  ],
+  "watch": [
+    "db",
+    "src",
+    "util",
+    "package.lock.json",
+    "babelrc"
+  ],
+  "exec": "babel-node server.js",
+  "ext": "js"
+}

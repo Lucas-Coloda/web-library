@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "*": [
+          "./"
+        ],
+        "db/*": [
+          "db"
+        ],
+        "entity/*": [
+          "./src/entity"
+        ]
+      }
+    }
+  }
