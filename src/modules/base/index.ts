@@ -1,5 +1,5 @@
 import { createModule } from 'graphql-modules'
-import schema from './schema.js'
+import schema from './schema'
 
 
 const BaseModule = createModule({

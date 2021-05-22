@@ -1,32 +1,32 @@
 import FakeDB from 'src/db/fakeDB'
-import Author from '../../entity/Author.js' 
-import Genre from '../../entity/Genre.js' 
-import Book from '../../entity/Book.js' 
+import Author from '@types/Author'
+import Book from '@types/Book'
+import Genre from '@types/Genre'
 
 
-function getGenres (genresIds) {
+function getGenres (genresIds): Genre[] {
 	return genresIds.map(genreId => {
-		const genreObject = FakeDB.genre.genres.find(genre => genre.id == genreId); 
+		const genreObject = FakeDB.genre.genres.find(genre => genre.id == genreId) 
 		if (!genreObject) {
 				throw new Error('Cound\'t find specified genre')
 		}
 
-		return new Genre().fromObject(genreObject)
+		return new Genre.fromObject(genreObject)
 	})
 }
 
-function getAuthors (authorsIds) {
+function getAuthors (authorsIds: String[]) {
 	return authorsIds.map(authorId => {
-		const authorObject = FakeDB.author.authors.find(author => author.id == authorId); 
+		const authorObject = FakeDB.author.authors.find(author => author.id == authorId) 
 		if (!authorObject) {
 				throw new Error('Cound\'t find specified author')
 		}
 
-		return new Author().fromObject(authorObject)
+		return new Author.fromObject(authorObject)
 	})
 }
 
-function createBook (_, { title, summary, isbn, url, genresIds = [], authorsIds = []}) {
+function createBook (_: any, { title, summary, isbn, url, genresIds = [], authorsIds = []}) {
 	try {
 		const genres = getGenres(genresIds)
 		const authors = getAuthors(authorsIds)

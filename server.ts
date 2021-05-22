@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server';
-import application from './src/applicationSchemaFactory/index.js'
+import application from './src/applicationSchemaFactory'
 
 const schema = application.createSchemaForApollo()
 

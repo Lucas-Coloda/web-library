@@ -1,8 +1,8 @@
 import { createModule } from 'graphql-modules'
 
-import Query from './query.js'
-import Mutation from './mutation.js'
-import typeDefs from './schema.js'
+import Query from './query'
+import Mutation from './mutation'
+import typeDefs from './schema'
 
 
 const GenreModule = createModule({

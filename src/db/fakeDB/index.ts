@@ -7,21 +7,21 @@ const counters = {
 const fakeData = {
 	book: {
 		books: [],
-		nextId: () => {
+		nextId: (): Number => {
 			counters.book++
 			return counters.book
 		},
 	},
 	genre: {
 		genres: [],
-		nextId: () => {
+		nextId: (): Number => {
 			counters.genre++
 			return counters.genre
 		},
 	},
 	author: {
 		authors: [],
-		nextId: () => {
+		nextId: (): Number => {
 			counters.author++
 			return counters.author
 		},
