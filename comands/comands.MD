@@ -23,3 +23,6 @@ docker cp containerId:inputScrInsideContainer outputSrcInYourMachine
 
 # Simple docker-compose build
 docker-compose up --build
+
+# Run all services in background without cache 
+docker-compose up --quiet-pull --force-recreate -d
