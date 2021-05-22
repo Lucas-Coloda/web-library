@@ -1,4 +1,4 @@
-import fakeData from '../../../db/fakeDB/index.js'
+import fakeData from 'src/db/fakeDB'
 
 const getAuthor = (_, { id }) => fakeData.author.authors.find(author => author.id == id)
 const getAuthors = () => fakeData.author.authors

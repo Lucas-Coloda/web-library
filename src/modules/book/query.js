@@ -1,4 +1,4 @@
-import FakeDB from '../../../db/fakeDB/index.js'
+import FakeDB from 'src/db/fakeDB'
 
 const getBook = (_, { id }) => FakeDB.book.books.find(book => book.id == id)
 const getBooks = () => FakeDB.book.books

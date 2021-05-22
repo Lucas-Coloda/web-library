@@ -1,4 +1,4 @@
-import fakeData from '../../../db/fakeDB/index.js'
+import fakeData from 'src/db/fakeDB'
 import Author from '../../entity/Author.js'
 
 const createAuthor = (_, { name, lastName }) => {

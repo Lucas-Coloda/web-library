@@ -1,4 +1,4 @@
-import FakeDB from '../../../db/fakeDB/index.js'
+import FakeDB from 'src/db/fakeDB'
 import Author from '../../entity/Author.js' 
 import Genre from '../../entity/Genre.js' 
 import Book from '../../entity/Book.js' 

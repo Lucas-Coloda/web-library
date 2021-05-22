@@ -1,4 +1,4 @@
-import FakeDB from '../../../db/fakeDB/index.js'
+import FakeDB from 'src/db/fakeDB'
 import Genre from '../../entity/Genre.js'
 
 const createGenre = (_, { name }) => {
