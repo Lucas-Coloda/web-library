@@ -5,9 +5,7 @@
   "watch": [
     "db",
     "src",
-    "util",
-    "package.lock.json",
-    "babelrc"
+    "util"
   ],
   "exec": "babel-node server.js",
   "ext": "js"
