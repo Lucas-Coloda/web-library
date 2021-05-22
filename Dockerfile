@@ -4,7 +4,10 @@ WORKDIR /usr/app
 
 COPY package*.json ./
 
-RUN ./init
+COPY init.sh ./
+
+USER root
+RUN su root ./init.sh
 
 COPY . .
 
