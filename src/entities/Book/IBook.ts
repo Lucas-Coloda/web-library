@@ -1,5 +1,5 @@
-import { Author } from '@types/Author/Author'
-import { Genre } from '@types/Genre/Genre'
+import { Author } from '@entities/Author/Author'
+import { Genre } from '@entities/Genre/Genre'
 
 
 export interface IBook {

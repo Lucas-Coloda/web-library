@@ -1,4 +1,4 @@
-import { BookDAO } from '@types/Book/BookDAO'
+import { BookDAO } from '@entities/Book/BookDAO'
 
 
 function createBook (_: any, { title, summary, isbn, url, genresIds = [], authorsIds = []}) {

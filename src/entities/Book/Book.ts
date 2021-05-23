@@ -1,7 +1,7 @@
-import { Author } from '@types/Author/Author'
-import { AuthorDAO } from '@types/Author/AuthorDAO'
-import { Genre } from '@types/Genre/Genre'
-import { GengeDAO } from '@types/Genre/GenreDAO'
+import { Author } from '@entities/Author/Author'
+import { AuthorDAO } from '@entities/Author/AuthorDAO'
+import { Genre } from '@entities/Genre/Genre'
+import { GengeDAO } from '@entities/Genre/GenreDAO'
 import { IBook } from './IBook'
 
 
