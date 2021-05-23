@@ -1,8 +1,18 @@
-import Author from "./Author"
-import Genre from "./Genre"
+import { Author } from "./Author"
+import { Genre } from "./Genre"
 
+export interface Book {
+	readonly id: String
+	title: String
+	summary: String
+	isbn: String
+	url: String
+	genres: Genre[]
+	authors: Author[]
+	fromObject: Function
+}
 
-export default class Book {
+export class Book implements Book{
 	public readonly id: String
 	public title: String
 	public summary: String
@@ -21,7 +31,10 @@ export default class Book {
 		this.authors = authors
 	}
 
-	public fromObject = ({ id, title, summary, isbn, url, genres, authors }) => {
+	public static fromObject: Function = ({
+		id, title, summary, isbn, url,
+		genres, authors
+	 }): Book => {
 		return new Book(id, title, summary, isbn, url, genres, authors)
-	} 
+	}
 }

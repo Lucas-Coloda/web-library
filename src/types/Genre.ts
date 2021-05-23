@@ -1,14 +1,21 @@
-export default class Genre {
+export interface Genre {
+	id: String
+	name: String
+	fromObject: Function
+}
+
+export class Genre implements Genre {
 	public id: String
 	public name: String
-	static fromObject: any
 
 	constructor (id: String, name: String) {
 		this.id = id
 		this.name = name
-	}
-
-	public fromObject ({id, name}): Genre {
-		return new Genre(id, name)
 	} 
+
+	public static fromObject: Function = ({
+		id, name
+	}): Genre => {
+		return new Genre(id, name) 
+	}
 }

@@ -1,8 +1,14 @@
-export default class Author {
+export interface Author {
+	readonly id: Number
+	name: String
+	lastName: String
+	fromObject: Function
+}
+
+export class Author implements Author {
 	public readonly id: Number
 	public name: String
 	public lastName: String
-	static fromObject: any
 
 	constructor (id: Number, name: String, lastName: String) {
 		this.id = id
@@ -10,7 +16,9 @@ export default class Author {
 		this.lastName = lastName
 	}
 
-	public fromObject ({ id, name, lastName }): Author {
+	public static fromObject: Function = ({ 
+		id, name, lastName 
+	}): Author => {
 		return new Author(id, name, lastName);
 	}
 }

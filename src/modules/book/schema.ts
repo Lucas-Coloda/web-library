@@ -5,7 +5,6 @@ const schema = gql`
 	type Book {
     id: String
     title: String
-    # author: Author
     summary: String
     isbn: String
     url: String

@@ -1,5 +1,5 @@
 import fakeData from 'src/db/fakeDB'
-import Author from '@types/Author'
+import { Author } from '@types/Author'
 
 const createAuthor = (_, { name, lastName }) => {
     const newAuthorId = fakeData.author.nextId()

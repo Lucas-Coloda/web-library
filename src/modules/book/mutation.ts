@@ -1,7 +1,7 @@
 import FakeDB from 'src/db/fakeDB'
-import Author from '@types/Author'
-import Book from '@types/Book'
-import Genre from '@types/Genre'
+import { Author } from '@types/Author'
+import { Book } from '@types/Book'
+import { Genre } from '@types/Genre'
 
 
 function getGenres (genresIds): Genre[] {
