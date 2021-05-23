@@ -1,6 +1,6 @@
-import fakeData from 'src/db/fakeDB'
+import { AuthorDAO } from '@types/Author'
 
-const getAuthor = (_, { id }) => fakeData.author.authors.find(author => author.id == id)
-const getAuthors = () => fakeData.author.authors
+const getAuthor = (_, { id }) => new AuthorDAO().getAuthor(id)
+const getAuthors = () => new AuthorDAO().getAuthors()
 
 export default { getAuthor, getAuthors }

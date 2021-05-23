@@ -1,6 +1,6 @@
-import FakeDB from 'src/db/fakeDB'
+import { BookDAO } from '@types/Book'
 
-const getBook = (_, { id }) => FakeDB.book.books.find(book => book.id == id)
-const getBooks = () => FakeDB.book.books
+const getBook = (_, { id }) => new BookDAO().getBook(id)
+const getBooks = () => new BookDAO().getBooks()
 
 export default { getBook, getBooks }
